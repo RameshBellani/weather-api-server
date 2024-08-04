@@ -1,11 +1,11 @@
 const express = require('express');
-const cors = require('cors');
+
 require('dotenv').config();
 
 const { fetchWeatherData } = require('./weatherApi');
 
 const app = express();
-app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 app.get('/weather', async (req, res) => {
